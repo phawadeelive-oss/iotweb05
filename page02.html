@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="./images/girl.png" type="image/png" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black m-0 text-white font-['IBM_Plex_Mono']">
+    <!-- 1. ส่วน Navbar ด้านบน  -->
+    <div class="w-full px-8 lg:px-20 mx-auto">
+      <div
+        class="flex justify-between items-center bg-[#514d4d] px-8 lg:px-16 py-6 rounded-b-[10px]"
+      >
+        <!-- แสดงลิงค์เมนู -->
+        <div class="flex gap-8 lg:gap-12">
+          <a
+            href="#"
+            class="text-[#c2bfbf] no-underline hover:text-[greenyellow] hover:font-bold transition-all"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-[#c2bfbf] no-underline hover:text-[greenyellow] hover:font-bold transition-all"
+            >Case Studies</a
+          >
+          <a
+            href="#"
+            class="text-[#c2bfbf] no-underline hover:text-[greenyellow] hover:font-bold transition-all"
+            >Testimonials</a
+          >
+          <a
+            href="#"
+            class="text-[#c2bfbf] no-underline hover:text-[greenyellow] hover:font-bold transition-all"
+            >Recent work</a
+          >
+          <a
+            href="#"
+            class="text-[#c2bfbf] no-underline hover:text-[greenyellow] hover:font-bold transition-all"
+            >Get In Touch</a
+          >
+        </div>
+        <!-- แสดงลิงค์ไอคอน -->
+        <div class="flex gap-6">
+          <a
+            href="#"
+            class="text-[#c2bfbf] hover:text-[greenyellow] hover:font-bold transition-all"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            href="#"
+            class="text-[#c2bfbf] hover:text-[greenyellow] hover:font-bold transition-all"
+            ><i class="bi bi-behance"></i
+          ></a>
+          <a
+            href="#"
+            class="text-[#c2bfbf] hover:text-[greenyellow] hover:font-bold transition-all"
+            ><i class="bi bi-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container -->
+    <div class="max-w-[1180px] mx-auto px50">
+      <!-- 2. ส่วน Hero Section -->
+      <div
+        class="flex flex-col lg:flex-row items-center justify-between my-100 lg:my-16 gap-100"
+      >
+        <!-- แสดง info -->
+        <div class="flex flex-col gap-5 max-w-xl">
+          <span
+            id="h-name"
+            class="text-white font-['Raleway'] font-bold text-4xl lg:text-5xl"
+            >Phawadee Khaengpenkhae</span
+          >
+          <span
+            id="h-lorem"
+            class="text-[#a39c9c] text-sm lg:text-base leading-relaxed"
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+            eveniet in, ipsum deserunt sit labore cupiditate repudiandae,
+            suscipit quas, vero alias minus doloremque explicabo. Voluptas iure
+            dolor cupiditate illo eaque.</span
+          >
+          <button
+            class="w-[280px] lg:w-[300px] bg-[green] text-white py-4 border-none rounded-[10px] font-bold shadow-[0px_4px_35px_rgb(165,246,246)] hover:bg-[#223801] cursor-pointer transition-all"
+          >
+            Let's started &gt;
+          </button>
+        </div>
+        <!--- แสดง Image -->
+        <div class="shrink-0">
+          <img
+            src="./images/person.jpg"
+            alt="Profile"
+            class="w-[280px] h-[280px] lg:w-[400px] lg:h-[400px] object-cover rounded-full"
+          />
+        </div>
+      </div>
+
+      <!-- 3. ส่วน Work With -->
+      <div class="mt-12 mb5">
+        <span class="text-white text-lg lg:text-xl font-bold">Worked With</span>
+      </div>
+
+      <!-- 4. ส่วน Brand Section -->
+      <div class="grid grid-cols-2 lg:grid-cols-5 mt-24 mb-26 gap-8">
+        <a
+          href="#"
+          class="border-2 border-[#4b4444] rounded-[10px] h-[70px] flex items-center justify-center hover:border-[#a5f6f6] transition-all bg-black"
+        >
+          <img
+            src="./images/logo1.png"
+            alt="Logo 1"
+            class="w-[100px] object-contain"
+          />
+        </a>
+        <a
+          href="#"
+          class="border-2 border-[#4b4444] rounded-[10px] h-[70px] flex items-center justify-center hover:border-[#a5f6f6] transition-all bg-black"
+        >
+          <img
+            src="./images/logo2.png"
+            alt="Logo 2"
+            class="w-[100px] object-contain"
+          />
+        </a>
+        <a
+          href="#"
+          class="border-2 border-[#4b4444] rounded-[10px] h-[70px] flex items-center justify-center hover:border-[#a5f6f6] transition-all bg-black"
+        >
+          <img
+            src="./images/logo3.png"
+            alt="Logo 3"
+            class="w-[100px] object-contain"
+          />
+        </a>
+        <a
+          href="#"
+          class="border-2 border-[#4b4444] rounded-[10px] h-[70px] flex items-center justify-center hover:border-[#a5f6f6] transition-all bg-black"
+        >
+          <img
+            src="./images/logo4.png"
+            alt="Logo 4"
+            class="w-[100px] object-contain"
+          />
+        </a>
+        <a
+          href="#"
+          class="border-2 border-[#4b4444] rounded-[10px] h-[70px] flex items-center justify-center hover:border-[#a5f6f6] transition-all bg-black"
+        >
+          <img
+            src="./images/logo5.png"
+            alt="Logo 5"
+            class="w-[100px] object-contain"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

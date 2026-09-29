@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakery Shop</title>
+    <link rel="shortcut icon" href="./images/bakery.png" type="image/png" />
+    <!-- Google Fonts & Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prompt:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              playfair: ["'Playfair Display'", "serif"],
+              oswald: ["Oswald", "sans-serif"],
+              prompt: ["Prompt", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-playfair bg-white text-gray-800 antialiased">
+    <!-- [ส่วนที่ 1] Hero Section -->
+    <section
+      class="relative w-full min-h-[900px] bg-[#121212] bg-cover bg-center bg-no-repeat flex flex-col justify-between px-[8%] pt-[35px] pb-[80px] text-white"
+      style="
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.2) 60%,
+            rgba(0, 0, 0, 0) 100%
+          ),
+          url(&quot;./images/Image-high.jpg&quot;);
+      "
+    >
+      <header class="flex items-center justify-start gap-[45px] w-full">
+        <div class="flex-shrink-0">
+          <img
+            src="./images/bakery.png"
+            alt="Keithston Logo"
+            class="h-[160px] block"
+          />
+        </div>
+        <nav>
+          <ul class="flex list-none gap-[30px]">
+            <li>
+              <a
+                href="#"
+                class="font-oswald text-[1.5rem] font-light text-[rgb(232,232,119)] hover:text-orange-500 opacity-90 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-oswald text-[1.5rem] font-light text-[rgb(232,232,119)] hover:text-orange-500 opacity-90 transition-colors"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-oswald text-[1.5rem] font-light text-[rgb(232,232,119)] hover:text-orange-500 opacity-90 transition-colors"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="font-oswald text-[1.5rem] font-light text-[rgb(232,232,119)] hover:text-orange-500 opacity-90 transition-colors"
+                >Services</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="max-w-[520px] my-auto">
+        <p
+          class="font-oswald text-[1.3rem] text-[rgb(232,232,119)] mb-[10px] font-light"
+        >
+          Delicious Cafe
+        </p>
+        <h1
+          class="font-playfair italic font-bold text-[5rem] leading-[1.12] text-white mb-[30px] drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]"
+        >
+          Sweet Treats,<br />Perfect Eats
+        </h1>
+        <div class="flex items-center gap-[22px]">
+          <a
+            href="#"
+            class="bg-[#933c2d] hover:bg-[#792f22] text-white font-oswald px-[28px] py-[11px] rounded-[3px] text-[0.9rem] font-normal inline-block transition-colors"
+            >Shop Now</a
+          >
+          <a
+            href="#"
+            class="text-[rgb(232,232,119)] font-oswald text-[0.9rem] font-[350] opacity-90 hover:opacity-100 hover:underline transition-opacity"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- [ส่วนที่ 2] Top Products Section -->
+    <section class="w-full bg-white px-[8%] pt-[60px] pb-[80px]">
+      <h2
+        class="font-playfair italic font-[440] text-[4.5rem] text-[#b60707] text-center mb-[60px]"
+      >
+        Top Products
+      </h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] max-w-[880px] mx-auto"
+      >
+        <!-- การ์ด 1 -->
+        <div
+          class="rounded-lg p-[18px] flex flex-col justify-between shadow-[0_4px_12px_rgba(0,0,0,0.15)] bg-cover bg-center"
+          style="background-image: url(&quot;./images/backgr04.png&quot;)"
+        >
+          <div
+            class="w-full h-[160px] flex items-center justify-center mb-[15px] overflow-hidden"
+          >
+            <img
+              src="./images/bread01.png"
+              alt="Whole Grain Bread"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex justify-between items-center">
+              <span class="text-white font-oswald text-[0.9rem] font-medium"
+                >40 Baht</span
+              >
+              <span
+                class="inline-flex items-center justify-center w-[18px] h-[18px] border border-[#777777] rounded-full text-[#aaaaaa] text-[0.75rem] italic font-playfair"
+                >i</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[#d0d0d0] font-oswald text-[0.85rem] font-medium"
+                >Whole Grain Bread</span
+              >
+              <button
+                class="bg-[#933c2d] text-white px-[18px] py-[6px] rounded font-oswald text-[1rem] cursor-pointer hover:bg-[#792f22] transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- การ์ด 2 -->
+        <div
+          class="rounded-lg p-[18px] flex flex-col justify-between shadow-[0_4px_12px_rgba(0,0,0,0.15)] bg-cover bg-center"
+          style="background-image: url(&quot;./images/backgr04.png&quot;)"
+        >
+          <div
+            class="w-full h-[160px] flex items-center justify-center mb-[15px] overflow-hidden"
+          >
+            <img
+              src="./images/bread02.png"
+              alt="Whole Grain Bread"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex justify-between items-center">
+              <span class="text-white font-oswald text-[0.9rem] font-medium"
+                >40 Baht</span
+              >
+              <span
+                class="inline-flex items-center justify-center w-[18px] h-[18px] border border-[#777777] rounded-full text-[#aaaaaa] text-[0.75rem] italic font-playfair"
+                >i</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[#d0d0d0] font-oswald text-[0.85rem] font-medium"
+                >Whole Grain Bread</span
+              >
+              <button
+                class="bg-[#933c2d] text-white px-[18px] py-[6px] rounded font-oswald text-[1rem] cursor-pointer hover:bg-[#792f22] transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- การ์ด 3 -->
+        <div
+          class="rounded-lg p-[18px] flex flex-col justify-between shadow-[0_4px_12px_rgba(0,0,0,0.15)] bg-cover bg-center"
+          style="background-image: url(&quot;./images/backgr04.png&quot;)"
+        >
+          <div
+            class="w-full h-[160px] flex items-center justify-center mb-[15px] overflow-hidden"
+          >
+            <img
+              src="./images/bread03.png"
+              alt="Whole Grain Bread"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex justify-between items-center">
+              <span class="text-white font-oswald text-[0.9rem] font-medium"
+                >40 Baht</span
+              >
+              <span
+                class="inline-flex items-center justify-center w-[18px] h-[18px] border border-[#777777] rounded-full text-[#aaaaaa] text-[0.75rem] italic font-playfair"
+                >i</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[#d0d0d0] font-oswald text-[0.85rem] font-medium"
+                >Whole Grain Bread</span
+              >
+              <button
+                class="bg-[#933c2d] text-white px-[18px] py-[6px] rounded font-oswald text-[1rem] cursor-pointer hover:bg-[#792f22] transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- การ์ด 4 -->
+        <div
+          class="rounded-lg p-[18px] flex flex-col justify-between shadow-[0_4px_12px_rgba(0,0,0,0.15)] bg-cover bg-center"
+          style="background-image: url(&quot;./images/backgr04.png&quot;)"
+        >
+          <div
+            class="w-full h-[160px] flex items-center justify-center mb-[15px] overflow-hidden"
+          >
+            <img
+              src="./images/bread04.png"
+              alt="Whole Grain Bread"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex justify-between items-center">
+              <span class="text-white font-oswald text-[0.9rem] font-medium"
+                >40 Baht</span
+              >
+              <span
+                class="inline-flex items-center justify-center w-[18px] h-[18px] border border-[#777777] rounded-full text-[#aaaaaa] text-[0.75rem] italic font-playfair"
+                >i</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[#d0d0d0] font-oswald text-[0.85rem] font-medium"
+                >Whole Grain Bread</span
+              >
+              <button
+                class="bg-[#933c2d] text-white px-[18px] py-[6px] rounded font-oswald text-[1rem] cursor-pointer hover:bg-[#792f22] transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- การ์ด 5 -->
+        <div
+          class="rounded-lg p-[18px] flex flex-col justify-between shadow-[0_4px_12px_rgba(0,0,0,0.15)] bg-cover bg-center"
+          style="background-image: url(&quot;./images/backgr04.png&quot;)"
+        >
+          <div
+            class="w-full h-[160px] flex items-center justify-center mb-[15px] overflow-hidden"
+          >
+            <img
+              src="./images/bread05.png"
+              alt="Whole Grain Bread"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex justify-between items-center">
+              <span class="text-white font-oswald text-[0.9rem] font-medium"
+                >40 Baht</span
+              >
+              <span
+                class="inline-flex items-center justify-center w-[18px] h-[18px] border border-[#777777] rounded-full text-[#aaaaaa] text-[0.75rem] italic font-playfair"
+                >i</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[#d0d0d0] font-oswald text-[0.85rem] font-medium"
+                >Whole Grain Bread</span
+              >
+              <button
+                class="bg-[#933c2d] text-white px-[18px] py-[6px] rounded font-oswald text-[1rem] cursor-pointer hover:bg-[#792f22] transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- การ์ด 6 -->
+        <div
+          class="rounded-lg p-[18px] flex flex-col justify-between shadow-[0_4px_12px_rgba(0,0,0,0.15)] bg-cover bg-center"
+          style="background-image: url(&quot;./images/backgr04.png&quot;)"
+        >
+          <div
+            class="w-full h-[160px] flex items-center justify-center mb-[15px] overflow-hidden"
+          >
+            <img
+              src="./images/bread06.png"
+              alt="Whole Grain Bread"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <div class="flex flex-col gap-[10px]">
+            <div class="flex justify-between items-center">
+              <span class="text-white font-oswald text-[0.9rem] font-medium"
+                >40 Baht</span
+              >
+              <span
+                class="inline-flex items-center justify-center w-[18px] h-[18px] border border-[#777777] rounded-full text-[#aaaaaa] text-[0.75rem] italic font-playfair"
+                >i</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span
+                class="text-[#d0d0d0] font-oswald text-[0.85rem] font-medium"
+                >Whole Grain Bread</span
+              >
+              <button
+                class="bg-[#933c2d] text-white px-[18px] py-[6px] rounded font-oswald text-[1rem] cursor-pointer hover:bg-[#792f22] transition-colors"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [ส่วนที่ 3] Promo Section -->
+    <section
+      class="w-full min-h-[420px] bg-[#1e1e1e] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center px-[40px] py-[80px] mt-[60px]"
+      style="background-image: url(&quot;./images/image03.png&quot;)"
+    >
+      <h2
+        class="font-playfair italic text-[3.2rem] font-bold text-[#8c3f2d] mb-[15px] leading-[1.2]"
+      >
+        20% Off Your First Order
+      </h2>
+      <p
+        class="text-[1.05rem] text-[#555555] max-w-[480px] leading-[1.5] mb-[25px] font-light"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Nesciunt
+        rem.
+      </p>
+      <a
+        href="#"
+        class="bg-[#8c3f2d] hover:bg-[#723122] text-white px-[36px] py-[12px] rounded-lg font-oswald text-[1rem] font-normal inline-block transition-colors"
+        >Learn More</a
+      >
+    </section>
+
+    <!-- [ส่วนที่ 4] Explore Section -->
+    <section class="w-full bg-white px-[8%] pt-[50px] pb-[80px] text-center">
+      <h2
+        class="font-playfair italic font-bold text-[2.8rem] text-black mb-[30px]"
+      >
+        Explore More
+      </h2>
+
+      <!-- เมนูเลือกหมวดหมู่ -->
+      <div class="max-w-[800px] mx-auto mb-[40px] border-b border-[#e0e0e0]">
+        <ul
+          class="flex justify-center flex-wrap gap-[12px_18px] sm:gap-[32px] list-none p-0 pb-[12px] m-0"
+        >
+          <li>
+            <a
+              href="#"
+              class="relative text-[#222222] font-semibold text-[0.95rem] pb-[12px] after:content-[''] after:absolute after:-bottom-[1px] after:left-0 after:w-full after:h-[3px] after:bg-[#8c3f2d] after:rounded-sm"
+              >Cake</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[#555555] font-semibold text-[0.95rem] pb-[12px] hover:text-[#222222] transition-colors"
+              >Muffins</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[#555555] font-semibold text-[0.95rem] pb-[12px] hover:text-[#222222] transition-colors"
+              >Croissant</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[#555555] font-semibold text-[0.95rem] pb-[12px] hover:text-[#222222] transition-colors"
+              >Bread</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[#555555] font-semibold text-[0.95rem] pb-[12px] hover:text-[#222222] transition-colors"
+              >Tart</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[#555555] font-semibold text-[0.95rem] pb-[12px] hover:text-[#222222] transition-colors"
+              >Favorite</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- รูปภาพขนม 6 รูป -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] max-w-[1000px] mx-auto"
+      >
+        <div
+          class="group w-full h-[250px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
+        >
+          <img
+            src="./images/image001.png"
+            alt="Cake 1"
+            class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+          />
+        </div>
+        <div
+          class="group w-full h-[250px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
+        >
+          <img
+            src="./images/image002.png"
+            alt="Cake 2"
+            class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+          />
+        </div>
+        <div
+          class="group w-full h-[250px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
+        >
+          <img
+            src="./images/image003.png"
+            alt="Cake 3"
+            class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+          />
+        </div>
+        <div
+          class="group w-full h-[250px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
+        >
+          <img
+            src="./images/image004.png"
+            alt="Cake 4"
+            class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+          />
+        </div>
+        <div
+          class="group w-full h-[250px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
+        >
+          <img
+            src="./images/image005.png"
+            alt="Cake 5"
+            class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+          />
+        </div>
+        <div
+          class="group w-full h-[250px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
+        >
+          <img
+            src="./images/image006.png"
+            alt="Cake 6"
+            class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- [ส่วนที่ 5] About Us Section -->
+    <section
+      class="w-full min-h-[420px] bg-[#1e1e1e] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center px-[20px] py-[60px] mt-[60px] text-white"
+      style="background-image: url(&quot;./images/backgr03.png&quot;)"
+    >
+      <h2
+        class="font-playfair italic text-[3.2rem] font-bold text-white mb-[18px]"
+      >
+        About us
+      </h2>
+      <p
+        class="text-[1.05rem] text-[#e0e0e0] max-w-[520px] leading-[1.6] mb-[28px] font-light"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+        Nesciunt rem odit labore unde<br />
+        nemo omnis sequi.
+      </p>
+      <a
+        href="#"
+        class="bg-[#8c3f2d] hover:bg-[#723122] text-white font-oswald px-[36px] py-[12px] rounded-lg text-[1rem] font-normal inline-block transition-colors"
+        >Read More</a
+      >
+    </section>
+
+    <!-- [ส่วนที่ 6] Featured Treats Section -->
+    <section class="w-full bg-white px-[8%] pt-[60px] pb-[80px] text-center">
+      <h2
+        class="font-playfair italic font-bold text-[2.8rem] text-black mb-[40px]"
+      >
+        Featured Treats
+      </h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] max-w-[1000px] mx-auto"
+      >
+        <!-- เมนูที่ 1 -->
+        <div class="group flex flex-col gap-[12px] text-left">
+          <div
+            class="w-full h-[260px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
+          >
+            <img
+              src="./images/image007.png"
+              alt="Puff Pastry"
+              class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+            />
+          </div>
+          <div class="flex justify-between items-center px-1">
+            <span class="text-[1.1rem] font-semibold text-black"
+              >Puff Pastry</span
+            >
+            <span class="text-[1.1rem] font-semibold text-black">8 Baht</span>
+          </div>
+        </div>
+        <!-- เมนูที่ 2 -->
+        <div class="group flex flex-col gap-[12px] text-left">
+          <div
+            class="w-full h-[260px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
+          >
+            <img
+              src="./images/image008.png"
+              alt="Doughnuts"
+              class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+            />
+          </div>
+          <div class="flex justify-between items-center px-1">
+            <span class="text-[1.1rem] font-semibold text-black"
+              >Doughnuts</span
+            >
+            <span class="text-[1.1rem] font-semibold text-black">8 Baht</span>
+          </div>
+        </div>
+        <!-- เมนูที่ 3 -->
+        <div class="group flex flex-col gap-[12px] text-left">
+          <div
+            class="w-full h-[260px] rounded-xl overflow-hidden shadow-[0_4px_10px_rgba(0,0,0,0.08)]"
+          >
+            <img
+              src="./images/image009.png"
+              alt="Brownies"
+              class="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-[1.04]"
+            />
+          </div>
+          <div class="flex justify-between items-center px-1">
+            <span class="text-[1.1rem] font-semibold text-black">Brownies</span>
+            <span class="text-[1.1rem] font-semibold text-black">8 Baht</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [ส่วนที่ 7] Footer Section -->
+    <footer
+      class="w-full bg-[#141414] bg-cover bg-center bg-no-repeat text-white px-[8%] pt-[50px] pb-[30px]"
+      style="background-image: url(&quot;./images/backgr04.png&quot;)"
+    >
+      <!-- แถบบน: โลโก้ และ Follow us -->
+      <div
+        class="flex flex-col sm:flex-row justify-between items-center pb-[25px] border-b border-white/15 mb-[40px] gap-5 sm:gap-0"
+      >
+        <div>
+          <img
+            src="./images/icon01.png"
+            alt="KEITHSTON Logo"
+            class="h-[200px] block"
+          />
+        </div>
+        <div class="flex items-center gap-[50px]">
+          <span class="text-[2.1rem] font-oswald text-[#d8b08c] font-medium"
+            >Follow us</span
+          >
+          <div class="flex gap-[15px]">
+            <a
+              href="#"
+              class="w-[50px] h-[50px] bg-[#d8b08c] text-[#141414] rounded-full flex items-center justify-center text-[1rem] hover:-translate-y-1 hover:bg-white transition-all"
+              ><i class="bi-facebook"></i
+            ></a>
+            <a
+              href="#"
+              class="w-[50px] h-[50px] bg-[#d8b08c] text-[#141414] rounded-full flex items-center justify-center text-[1rem] hover:-translate-y-1 hover:bg-white transition-all"
+              ><i class="bi-pinterest"></i
+            ></a>
+            <a
+              href="#"
+              class="w-[50px] h-[50px] bg-[#d8b08c] text-[#141414] rounded-full flex items-center justify-center text-[1rem] hover:-translate-y-1 hover:bg-white transition-all"
+              ><i class="bi-whatsapp"></i
+            ></a>
+            <a
+              href="#"
+              class="w-[50px] h-[50px] bg-[#d8b08c] text-[#141414] rounded-full flex items-center justify-center text-[1rem] hover:-translate-y-1 hover:bg-white transition-all"
+              ><i class="bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- เนื้อหาหลัก 3 คอลัมน์ -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[40px] max-w-[1100px] mx-auto mb-[50px]"
+      >
+        <!-- คอลัมน์ที่ 1: About Us -->
+        <div>
+          <h3
+            class="text-[3rem] font-oswald font-semibold text-[#d8b08c] mb-[20px]"
+          >
+            About Us
+          </h3>
+          <p
+            class="text-[1rem] font-oswald text-[#dddddd] leading-[1.7] mb-[4px] font-light"
+          >
+            (02) 807-4500
+          </p>
+          <p
+            class="text-[1rem] font-oswald text-[#dddddd] leading-[1.7] mb-[4px] font-light"
+          >
+            info@sau.ac.th
+          </p>
+          <p
+            class="text-[1rem] font-oswald text-[#dddddd] leading-[1.7] mb-[4px] font-light"
+          >
+            19/1 Phetkasem Road
+          </p>
+          <p
+            class="text-[1rem] font-oswald text-[#dddddd] leading-[1.7] mb-[4px] font-light"
+          >
+            Nongkham Bangkok
+          </p>
+          <p
+            class="text-[1rem] font-oswald text-[#dddddd] leading-[1.7] mb-[4px] font-light"
+          >
+            10160
+          </p>
+        </div>
+
+        <!-- คอลัมน์ที่ 2: Explore -->
+        <div>
+          <h3
+            class="text-[3rem] font-oswald font-semibold text-[#d8b08c] mb-[20px]"
+          >
+            Explore
+          </h3>
+          <ul class="list-none p-0 m-0 space-y-[12px]">
+            <li>
+              <a
+                href="#"
+                class="text-white font-oswald text-[1rem] font-medium hover:text-[#d8b08c] transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white font-oswald text-[1rem] font-medium hover:text-[#d8b08c] transition-colors"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white font-oswald text-[1rem] font-medium hover:text-[#d8b08c] transition-colors"
+                >Contact us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-white font-oswald text-[1rem] font-medium hover:text-[#d8b08c] transition-colors"
+                >Services</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- คอลัมน์ที่ 3: Recent News -->
+        <div>
+          <h3
+            class="text-[3rem] font-oswald font-semibold text-[#d8b08c] mb-[20px]"
+          >
+            Recent News
+          </h3>
+
+          <div class="flex items-center gap-[15px] mb-[16px]">
+            <div
+              class="w-[65px] h-[50px] rounded overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./images/image010.png"
+                alt="Puff pastry bliss"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[1rem] font-oswald text-[#aaaaaa] mb-[2px]"
+                >June 14, 2025</span
+              >
+              <span class="text-[1.3rem] font-semibold font-oswald text-white"
+                >Puff pastry bliss.</span
+              >
+            </div>
+          </div>
+
+          <div class="flex items-center gap-[15px] mb-[16px]">
+            <div
+              class="w-[65px] h-[50px] rounded overflow-hidden flex-shrink-0"
+            >
+              <img
+                src="./images/image011.png"
+                alt="Puff pastry bliss"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[1rem] font-oswald text-[#aaaaaa] mb-[2px]"
+                >June 14, 2025</span
+              >
+              <span class="text-[1.3rem] font-semibold font-oswald text-white"
+                >Puff pastry bliss.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ข้อความท้ายสุด -->
+      <div class="text-center pt-[10px] text-[1rem] text-[#888888]">
+        <p>&copy;2026 Phawadee Khaengpenkhae. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
